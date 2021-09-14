@@ -1,0 +1,111 @@
+<html>
+
+
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+        button {
+            font-size: 30px;
+            height: 100px;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+
+<body>
+    <button id="aigo">安装aigo</button>
+    <button id="btlh">安装比特量化</button>
+    <button id="zyhx">安装智赢汇鑫</button>
+    <button id="udd">安装优多多</button>
+    <button id="xn">安装熙牛量化</button>
+    <button id="aigo-web">aigo-h5</button>
+    <button id="btlh-web">比特量化-h5</button>
+    <button id="zyhx-web">智赢汇鑫-h5</button>
+    <button id="udd-web">优多多-h5</button>
+    <button id="xn-web">熙牛量化-h5</button>
+</body>
+
+<script>
+    let aigo = document.getElementById('aigo');
+    let btlh = document.getElementById('btlh');
+    let zyhx = document.getElementById('zyhx');
+    let udd = document.getElementById('udd');
+    let xn = document.getElementById('xn');
+
+    let aigoweb = document.getElementById('aigo-web');
+    let btlhweb = document.getElementById('btlh-web');
+    let zyhxweb = document.getElementById('zyhx-web');
+    let uddweb = document.getElementById('udd-web');
+    let xnweb = document.getElementById('xn-web');
+
+
+    function judgeClient() {
+        let client = '';
+        if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {  //判断iPhone|iPad|iPod|iOS
+            client = 'iOS';
+        } else if (/(Android)/i.test(navigator.userAgent)) {  //判断Android
+            client = 'Android';
+        } else {
+            client = 'PC';
+        }
+        return client;
+    }
+
+    aigoweb.onclick = function () {
+        window.location.href = 'http://h10game.com/aigo/';
+    }
+    btlhweb.onclick = function () {
+        window.location.href = 'http://h10game.com/btlh/';
+    }
+    zyhxweb.onclick = function () {
+        window.location.href = 'http://h10game.com/zyhx/';
+    }
+    uddweb.onclick = function () {
+        window.location.href = 'http://h10game.com/udd/';
+    }
+    xnweb.onclick = function () {
+        window.location.href = 'http://h10game.com/xn/';
+    }
+
+    aigo.onclick = function () {
+        if (judgeClient() == 'iOS') {
+            window.location.href = 'itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kgdnone/vq/master/aigo-manifest.plist';
+        } else {
+            window.location.href = 'aigo.apk';
+        }
+    }
+    btlh.onclick = function () {
+        if (judgeClient() == 'iOS') {
+            window.location.href = 'itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kgdnone/vq/master/btlh-manifest.plist';
+        } else {
+            window.location.href = 'btlh.apk';
+        }
+    }
+    zyhx.onclick = function () {
+        if (judgeClient() == 'iOS') {
+            window.location.href = 'itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kgdnone/vq/master/zyhx-manifest.plist';
+        } else {
+            window.location.href = 'zyhx.apk';
+        }
+    }
+    udd.onclick = function () {
+        if (judgeClient() == 'iOS') {
+            window.location.href = 'itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kgdnone/vq/master/udd-manifest.plist';
+        } else {
+            window.location.href = 'udd.apk';
+        }
+    }
+    xn.onclick = function () {
+        if (judgeClient() == 'iOS') {
+            window.location.href = 'itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/kgdnone/vq/master/xn-manifest.plist';
+        } else {
+            window.location.href = 'xn.apk';
+        }
+    }
+
+</script>
+
+</html>
